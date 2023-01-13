@@ -25,11 +25,12 @@
 
   .formWrapper {
     background-color: white;
-    padding: 20px 60px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 24em;
+    padding: 1em 0em;
     align-items: center;
 
     .fleet {
@@ -376,3 +377,20 @@
     }
   }
 }
+@media screen and (max-width :600px) {
+  .formContainer{
+    background-color: white;
+  }
+  .formWrapper{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding:20px 17px;
+  }
+}
+  
+// }
+// @media screen and (max-width:1500px-600px) 
+// {
+// .formWrapper{
+//   padding: 20px 60px;
+// }
+//   }
