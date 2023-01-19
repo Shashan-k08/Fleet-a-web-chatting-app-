@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
+import moment from 'moment';
+moment().format();
 
 const Message = ({ message }) => {
   const { currentUser } = useContext(AuthContext);
@@ -11,6 +13,10 @@ const Message = ({ message }) => {
   useEffect(() => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
+
+  var today = new Date();
+  var time =today.toLocaleTimeString();
+  
 
   return (
     <div
@@ -26,7 +32,7 @@ const Message = ({ message }) => {
           }
           alt=""
         />
-        <span>just now</span>
+        <span>{moment().format("ddd, hA")}</span>
       </div>
       <div className="messageContent">
         <p>{message.text}</p>
