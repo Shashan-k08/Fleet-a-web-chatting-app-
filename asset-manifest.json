@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Fleet-a-web-chatting-app-/static/css/main.ae963e5c.css",
+    "main.js": "/Fleet-a-web-chatting-app-/static/js/main.b3d720b5.js",
+    "static/media/Fleet-logos_transparent.png": "/Fleet-a-web-chatting-app-/static/media/Fleet-logos_transparent.5ed2381bc32b23229769.png",
+    "index.html": "/Fleet-a-web-chatting-app-/index.html",
+    "main.ae963e5c.css.map": "/Fleet-a-web-chatting-app-/static/css/main.ae963e5c.css.map",
+    "main.b3d720b5.js.map": "/Fleet-a-web-chatting-app-/static/js/main.b3d720b5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ae963e5c.css",
+    "static/js/main.b3d720b5.js"
+  ]
+}
