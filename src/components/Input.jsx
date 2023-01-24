@@ -22,6 +22,7 @@ const Input = () => {
   const { data } = useContext(ChatContext);
 
   const handleSend = async () => {
+    setText(" ");
     if (img) {
       const storageRef = ref(storage, uuid());
 
@@ -70,15 +71,20 @@ const Input = () => {
       [data.chatId + ".date"]: serverTimestamp(),
     });
 
-    setText("");
+   
     setImg(null);
   };
+  
+  function test(e) {
+    if (e.keyCode === 13)
+      handleSend();
+  }
   return (
     <div className="input">
       <input
         type="text"
         placeholder="Type something..."
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e) => setText(e.target.value)}  onKeyDown={test}  
         value={text}
       />
       <div className="send">
@@ -89,10 +95,10 @@ const Input = () => {
           id="file"
           onChange={(e) => setImg(e.target.files[0])}
         />
-        <label htmlFor="file">
+        <label htmlFor="file" >
           <img src={Img} alt="" />
         </label>
-        <button   onKeyDownCapture={handleSend} onClick={handleSend}>Send</button>
+        <button onClick={handleSend}>Send</button>
       </div>
     </div>
   );
